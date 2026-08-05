@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campo Play Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Campo Play Studio es un estudio indie de Barcelona especializado en juegos móviles casual e hiper‑casual, accesibles y pensados para partidas rápidas y divertidas." />
+  <style>
+    :root {
+      --blue-pastel: #6B9AC4;
+      --orange-pastel: #FFB380;
+      --green-pastel: #88D8B7;
+      --lavender-pastel: #C7B8E0;
+      --grey-light: #F7F9FB;
+      --grey-text: #3A4A5A;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--grey-light);
+      color: var(--grey-text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--blue-pastel);
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    .title p {
+      margin: 0.4rem 0 0;
+      font-size: 1.05rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      background: var(--orange-pastel);
+      color: #3A4A5A;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+      background: #fff;
+      padding: 1.5rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: #1F3864;
+      font-size: 1.4rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--blue-pastel);
+    }
+    a {
+      color: var(--blue-pastel);
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 2rem 1rem;
+      }
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+      .title h1 {
+        font-size: 1.9rem;
+      }
+      section {
+        padding: 1.25rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-wrap">
+      <!-- Asegúrate de que el archivo SVG esté en la misma carpeta que este index.html -->
+      <img src="logo_campo_play_full_light.svg" alt="Logo Campo Play Studio" class="logo" />
+      <div class="title">
+        <h1>Campo Play Studio</h1>
+        <p>Estudio indie de Barcelona especializado en juegos móviles casual e hiper‑casual.</p>
+      </div>
+    </div>
+    <a href="#juegos" class="btn">Ver juegos</a>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Campo Play Studio</h2>
+      <p>
+        Campo Play Studio es un estudio independiente de videojuegos móviles con base en Barcelona.
+        El estudio se especializa en juegos casual e hiper‑casual, fáciles de entender desde el primer segundo y perfectos
+        para sesiones cortas: en el transporte, entre tareas o en cualquier rato libre.
+      </p>
+      <p>
+        El enfoque de Campo Play Studio combina diseño simple, mecánicas claras y una monetización basada en anuncios respetuosa
+        con el jugador, sin modelos pay‑to‑win agresivos. El objetivo del estudio es ofrecer experiencias móviles divertidas,
+        accesibles y cuidadas, construidas de forma iterativa por un desarrollador indie.
+      </p>
+    </section>
+
+    <section id="juegos">
+      <h2>Juegos</h2>
+      <p>
+        Campo Play Studio está trabajando en sus primeros títulos móviles casual e hiper‑casual.
+        Próximamente podrás encontrar aquí más información, capturas de pantalla y enlaces de descarga en Google Play.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Para cualquier consulta o propuesta, puedes contactar con el estudio en:<br />
+        <strong><a href="mailto:campoplaystudio@outlook.es">campoplaystudio@outlook.es</a></strong>
+      </p>
+    </section>
+
+    <section id="privacidad">
+      <h2>Política de privacidad</h2>
+      <p>
+        Campo Play Studio desarrolla y publica juegos móviles que pueden utilizar servicios de terceros, como Google AdMob y Firebase,
+        para mostrar anuncios y obtener estadísticas anónimas de uso.
+      </p>
+      <p>
+        Los datos recogidos a través de estos servicios se utilizan de forma agregada para mejorar la calidad y la estabilidad de los juegos,
+        así como para analizar métricas de uso básicas. Campo Play Studio no recopila directamente información personal identificable
+        dentro de sus juegos, salvo que se indique explícitamente en funcionalidades futuras.
+      </p>
+      <p>
+        Para cualquier cuestión relacionada con la privacidad, puedes escribir a
+        <strong><a href="mailto:campoplaystudio@outlook.es">campoplaystudio@outlook.es</a></strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Campo Play Studio · Barcelona
+  </footer>
+</body>
+</html>
