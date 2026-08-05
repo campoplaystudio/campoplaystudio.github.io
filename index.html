@@ -37,7 +37,14 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
-
+.logo-badge {
+  background: #FFFFFF;        /* o #FFB380 para naranja pastel */
+  border-radius: 16px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .logo {
   width: 140px;
   height: auto;
@@ -119,13 +126,14 @@
 <body>
   <header>
     <div class="logo-wrap">
-      <!-- Asegúrate de que el archivo SVG esté en la misma carpeta que este index.html -->
-      <img src="logo_campo_play_icon.svg" alt="Logo Campo Play Studio" class="logo" />
+      <div class="logo-badge">
+        <img src="logo_campo_play_icon.svg" alt="Logo Campo Play Studio" class="logo" />
+      </div>
       <div class="title">
         <h1>Campo Play Studio</h1>
         <p>Estudio indie de Barcelona especializado en juegos móviles casual e hiper‑casual.</p>
       </div>
-    </div>
+    </div>    
     <a href="#juegos" class="btn">Ver juegos</a>
   </header>
 
