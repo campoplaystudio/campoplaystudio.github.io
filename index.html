@@ -30,26 +30,26 @@
       padding: 2.5rem 1.5rem;
       text-align: center;
     }
-.logo-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-.logo-badge {
-  background: #FFFFFF;        /* o #FFB380 para naranja pastel */
-  border-radius: 16px;
-  padding: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.logo {
-  width: 140px;
-  height: auto;
-  flex-shrink: 0;
-}
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .logo-badge {
+      background: #FFFFFF;        /* o #FFB380 para naranja pastel */
+      border-radius: 16px;
+      padding: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo {
+      width: 140px;
+      height: auto;
+      flex-shrink: 0;
+    }
     .title h1 {
       margin: 0;
       font-size: 2.2rem;
@@ -101,38 +101,127 @@
       color: var(--blue-pastel);
     }
 
-.social {
-  margin-top: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-}
+    .social {
+      margin-top: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
 
-.social-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-}
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
 
-.social-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
+    .social-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
 
-.instagram-icon {
-  background: linear-gradient(135deg, #FFB380, #C7B8E0); /* naranja pastel + lavanda */
-}
+    .instagram-icon {
+      background: linear-gradient(135deg, #FFB380, #C7B8E0); /* naranja pastel + lavanda */
+    }
 
-.instagram-icon span {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-    
+    .instagram-icon span {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Bloque de juegos / card de Dogdoku */
+    .game-list {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .game-card {
+      flex: 1 1 260px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 1.25rem 1.25rem 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      border: 1px solid rgba(31, 56, 100, 0.08);
+    }
+
+    .game-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .game-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--lavender-pastel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .game-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .game-title h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #1F3864;
+    }
+
+    .game-meta {
+      font-size: 0.9rem;
+      color: #6B7A8A;
+      margin-bottom: 0.5rem;
+    }
+
+    .game-description {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .game-features {
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .game-features li {
+      margin-bottom: 0.25rem;
+    }
+
+    .game-actions {
+      margin-top: 0.5rem;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      background: var(--green-pastel);
+      color: #1F3864;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-secondary:hover {
+      filter: brightness(1.05);
+    }
+
     @media (max-width: 600px) {
       header {
         padding: 2rem 1rem;
@@ -141,16 +230,19 @@
         flex-direction: column;
         gap: 0.75rem;
       }
-    
+
       .logo {
         width: 170px;
       }
-    
+
       .title h1 {
         font-size: 1.9rem;
-      }      
+      }
       section {
         padding: 1.25rem 1.25rem;
+      }
+      .game-list {
+        flex-direction: column;
       }
     }
   </style>
@@ -165,7 +257,7 @@
         <h1>Campo Play Studio</h1>
         <p>Estudio especializado en juegos móviles casual e hiper‑casual.</p>
       </div>
-    </div>    
+    </div>
   </header>
 
   <main>
@@ -186,25 +278,66 @@
     <section id="juegos">
       <h2>Juegos</h2>
       <p>
-        Campo Play Studio está trabajando en sus primeros títulos móviles casual e hiper‑casual.
-        Próximamente podrás encontrar aquí más información, capturas de pantalla y enlaces de descarga en Google Play.
+        Campo Play Studio estrena su primer título móvil: <strong>Dogdoku: Puzzle Canino</strong>,
+        un juego de lógica cozy protagonizado por perros kawaii, disponible en Google Play.
       </p>
+
+      <div class="game-list">
+        <article class="game-card">
+          <div class="game-title">
+            <div class="game-icon">
+              <!-- Sustituye por el icono real de Dogdoku -->
+              <img src="logo_dogdoku_icon.svg" alt="Icono de Dogdoku" />
+            </div>
+            <div>
+              <h3>Dogdoku: Puzzle Canino</h3>
+              <div class="game-meta">
+                Puzzle lógico · Android · Gratuito
+              </div>
+            </div>
+          </div>
+
+          <p class="game-description">
+            Coloca un perro en cada región del tablero sin repetir en la misma fila ni columna…
+            y sin que se toquen en diagonal. Ideal para quienes disfrutan de sudokus y otros puzzles de lógica,
+            pero quieren una experiencia cozy y relajada.
+          </p>
+
+          <ul class="game-features">
+            >Varios niveles y dificultades (Fácil, Media, Difícil).</li>
+            >Perros kawaii de distintas razas.</li>
+            >Sistema de estrellas según tu tiempo de resolución.</li>
+            >Modo claro y modo oscuro.</li>
+          </ul>
+
+          <div class="game-actions">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.dogdoku"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Descargar en Google Play
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>
-    Para cualquier consulta o propuesta, puedes contactar con el estudio en:<br />
-    <strong><a href="mailto:campoplaystudio@outlook.es">campoplaystudio@outlook.es</a></strong>
-  </p>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Para cualquier consulta o propuesta, puedes contactar con el estudio en:<br />
+        <strong><a href="mailto:campoplaystudio@outlook.es">campoplaystudio@outlook.es</a></strong>
+      </p>
 
-  <div class="social">
-    <span>Redes sociales:</span>
-<a href="https://www.instagram.com/campoplaystudio" target="_blank" rel="noopener" class="social-icon">
-  <img src="instagram_logo.svg" alt="Instagram Campo Play Studio" class="social-img" />
-</a>
-  </div>
-</section>
+      <div class="social">
+        <span>Redes sociales:</span>
+        <a href="https://www.instagram.com/campoplaystudio" target="_blank" rel="noopener" class="social-icon">
+          <img src="instagram_logo.svg" alt="Instagram Campo Play Studio" class="social-img" />
+        </a>
+      </div>
+    </section>
 
     <section id="privacidad">
       <h2>Política de privacidad</h2>
