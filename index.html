@@ -127,6 +127,97 @@
       display: block;
     }
 
+    /* Sección de juegos */
+    .game-list {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .game-card {
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(31, 56, 100, 0.08);
+    }
+
+    .game-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .game-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--lavender-pastel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .game-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .game-title h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #1F3864;
+    }
+
+    .game-meta {
+      font-size: 0.9rem;
+      color: #6B7A8A;
+      margin-bottom: 0.5rem;
+    }
+
+    .game-description {
+      font-size: 0.95rem;
+      margin: 0 0 0.75rem;
+    }
+
+    .game-features {
+      margin: 0 0 1rem;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .game-features li {
+      margin-bottom: 0.25rem;
+    }
+
+    .game-actions {
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      background: var(--orange-pastel);
+      color: #3A4A5A;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+
     @media (max-width: 600px) {
       header {
         padding: 2rem 1rem;
@@ -191,9 +282,134 @@
       <h2>Juegos</h2>
 
       <p>
-        Actualmente, Campo Play Studio no tiene ningún juego publicado.
-        Estamos trabajando en nuevos proyectos móviles casual y cozy que anunciaremos próximamente.
+        Descubre los juegos de Campo Play Studio: experiencias casual y cozy para Android,
+        pensadas para partidas rápidas, relajantes y divertidas.
       </p>
+
+      <div class="game-list">
+        <!-- Dogdoku -->
+        <article class="game-card">
+          <div class="game-title">
+            <div class="game-icon">
+              <img
+                src="dogdoku-icon.png"
+                alt="Icono de Dogdoku: Puzzle canino"
+              />
+            </div>
+
+            <div>
+              <h3>Dogdoku: Puzzle canino</h3>
+              <div class="game-meta">
+                Puzzle lógico · Android · Gratuito
+              </div>
+            </div>
+          </div>
+
+          <p class="game-description">
+            Coloca un perro en cada región del tablero sin repetir en la misma fila ni columna,
+            y sin que se toquen en diagonal. Una experiencia de lógica cozy protagonizada por perros kawaii.
+          </p>
+
+          <ul class="game-features">
+            <li>Varios niveles y dificultades.</li>
+            <li>Perros kawaii de distintas razas.</li>
+            <li>Puzzles relajados para jugar en sesiones cortas.</li>
+          </ul>
+
+          <div class="game-actions">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.dogdoku"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Descargar en Google Play
+            </a>
+          </div>
+        </article>
+
+        <!-- Block Blast -->
+        <article class="game-card">
+          <div class="game-title">
+            <div class="game-icon">
+              <img
+                src="block-blast-icon.png"
+                alt="Icono de Block Blast: Cozy Fusion"
+              />
+            </div>
+
+            <div>
+              <h3>Block Blast: Cozy Fusion</h3>
+              <div class="game-meta">
+                Puzzle de bloques · Android · Gratuito
+              </div>
+            </div>
+          </div>
+
+          <p class="game-description">
+            Coloca bloques de colores, completa líneas y consigue la mejor puntuación posible.
+            Un puzzle clásico con un estilo cozy, visualmente agradable y fácil de disfrutar.
+          </p>
+
+          <ul class="game-features">
+            <li>Mecánica de bloques fácil de aprender.</li>
+            <li>Partidas rápidas y adictivas.</li>
+            <li>Estilo visual cozy y relajado.</li>
+          </ul>
+
+          <div class="game-actions">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.campoplaystudio.blockblastcozyfusion"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Descargar en Google Play
+            </a>
+          </div>
+        </article>
+
+        <!-- Kawaii Cube -->
+        <article class="game-card">
+          <div class="game-title">
+            <div class="game-icon">
+              <img
+                src="kawaii-cube-icon.png"
+                alt="Icono de Kawaii Cube Color Sort"
+              />
+            </div>
+
+            <div>
+              <h3>Kawaii Cube Color Sort</h3>
+              <div class="game-meta">
+                Puzzle de clasificación · Android · Gratuito
+              </div>
+            </div>
+          </div>
+
+          <p class="game-description">
+            Ordena los cubos por color y completa cada nivel con calma y estrategia.
+            Un juego de clasificación colorido, adorable y perfecto para desconectar.
+          </p>
+
+          <ul class="game-features">
+            <li>Clasificación de cubos por colores.</li>
+            <li>Niveles progresivos y relajantes.</li>
+            <li>Diseño kawaii y colores pastel.</li>
+          </ul>
+
+          <div class="game-actions">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.campoplaystudio.kawaiicubecolorsort"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Descargar en Google Play
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="contacto">
